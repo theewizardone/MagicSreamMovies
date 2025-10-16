@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/GavinLonDigital/MagicStream/Server/MagicStreamServer/database"
-	"github.com/GavinLonDigital/MagicStream/Server/MagicStreamServer/models"
-	"github.com/GavinLonDigital/MagicStream/Server/MagicStreamServer/utils"
+	"github.com/theewizardone/MagicStream/Server/MagicStreamServer/database"
+	"github.com/theewizardone/MagicStream/Server/MagicStreamServer/models"
+	"github.com/theewizardone/MagicStream/Server/MagicStreamServer/utils"
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"
 	"go.mongodb.org/mongo-driver/v2/bson"
