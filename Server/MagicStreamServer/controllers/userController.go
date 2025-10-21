@@ -14,6 +14,8 @@ import (
 	"go.mongodb.org/mongo-driver/v2/bson"
 	"go.mongodb.org/mongo-driver/v2/mongo"
 	"golang.org/x/crypto/bcrypt"
+	"go.mongodb.org/mongo-driver/bson/primitive"
+
 )
 
 func HashPassword(password string) (string, error) {
@@ -63,7 +65,7 @@ func RegisterUser(client *mongo.Client) gin.HandlerFunc {
 			c.JSON(http.StatusConflict, gin.H{"error": "User already exists"})
 			return
 		}
-		user.UserID = bson.NewObjectID().Hex()
+		user.UserID = primitive.NewObjectID().Hex() //
 		user.CreatedAt = time.Now()
 		user.UpdatedAt = time.Now()
 		user.Password = hashedPassword
@@ -86,7 +88,7 @@ func LoginUser(client *mongo.Client) gin.HandlerFunc {
 		var userLogin models.UserLogin
 
 		if err := c.ShouldBindJSON(&userLogin); err != nil {
-			c.JSON(http.StatusBadRequest, gin.H{"error": "Invalide input data"})
+			c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid input data"})
 			return
 		}
 
