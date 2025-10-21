@@ -40,5 +40,5 @@ It also demonstrates how **MongoDB** can serve as a reliable, scalable database 
 
 1. Clone the repo  
    ```bash
-   git clone https://github.com/GavinLonDigital/MagicStream.git
+   git clone [https://github.com/theewizardone/MagicSreamMovies.git]
    cd MagicStream
