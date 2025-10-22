@@ -45,4 +45,3 @@ const Home =({updateMovieReview}) => {
 export default Home;
 
 
-
