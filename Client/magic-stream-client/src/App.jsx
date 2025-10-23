@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import './App.css'
 import Home from './components/home/Home';
 import Recommended from './components/recommended/Recommended';
